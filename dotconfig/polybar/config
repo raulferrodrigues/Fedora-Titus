@@ -76,9 +76,9 @@ font-3 = FiraCode Nerd Font Mono:style=Regular:size=18;4
 font-4 = Font Awesome 5 Free Solid:size=18;4
 font-5 = Noto Color Emoji:scale=20;4
 
-modules-left = launcher sep left bspwm right sep left bsplayout bspmode right
+modules-left = launcher sep left bspwm right sep left bsplayout bspmode right sep left pulseaudio right sep powermenu 
 modules-center = xwindow
-modules-right = powermenu sept left pulseaudio right sep left battery backlight bluetooth vpn dunst redshift right sep left eth wlan right sep left time right sep 
+modules-right = sep left battery backlight bluetooth vpn dunst redshift right sep left eth wlan right sep left time right sep 
 
 override-redirect = true
 wm-restack = bspwm
@@ -266,7 +266,7 @@ label-marked-padding-left = 1
 [module/launcher]
 type = custom/text
 content-background = ${colors.background}
-content-foreground = ${colors.shade17}
+content-foreground = ${colors.shade4}
 content-padding = 1
 click-left = "rofi -show drun"
 content = ""
@@ -274,11 +274,11 @@ content = ""
 [module/xwindow]
 type = internal/xwindow
 label = %title%
-label-maxlen = 120
+label-maxlen = 60
 label-empty = Desktop
 
 format = <label>
-format-prefix = " "
+format-prefix = ""
 format-prefix-foreground = ${colors.shade14}
 format-foreground = ${colors.shade14}
 ;format-background = ${colors.shade16}
@@ -497,7 +497,6 @@ type = internal/backlight
 card = intel_backlight
 
 enable-scroll = true
-
 format = <ramp><label>
 ;%{T8}<bar>%{T-}
 
@@ -630,7 +629,7 @@ label = %{A1:~/.config/polybar/polybar-scripts/cal-popup.sh --popup &:}%time%%{A
 [module/powermenu]
 type = custom/text
 content-background = ${colors.background}
-content-foreground = ${colors.shade17}
+content-foreground = ${colors.shade4}
 content-padding = 1
 click-left = "$HOME/.config/rofi/powermenu/powermenu.sh"
 content = "⏻"
