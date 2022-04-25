@@ -75,6 +75,7 @@ picom --config "$HOME/.config/bspwm/picom.conf" &
 nitrogen --set-auto "$HOME/.config/bg.jpg" &
 #/usr/bin/synergys -f -d ERROR -n studio-pc -c /etc/synergy.conf -a 192.168.69.10:24800 --log ~/.local/log/synergy.log &
 /bin/Discord --start-minimized &
+synology-drive &
 
 # Move to Desktop 1
 bspc desktop -f 1
