@@ -16,14 +16,14 @@ mv ./dotconfig/* ~/.config
 mv ./bg.jpg ~/.config
 
 # Installing Essential Programs 
-dnf install sddm bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit
+dnf install -y sddm bspwm sxhkd kitty rofi polybar picom thunar nitrogen lxpolkit
 # Installing Other less important Programs
-dnf install mangohud gimp vim lxappearance
+dnf install -y mangohud gimp vim lxappearance
 # Installing Custom ocs-url package
-dnf install ./rpm-packages/ocs-url-3.1.0-1.fc20.x86_64.rpm
+dnf install -y ./rpm-packages/ocs-url-3.1.0-1.fc20.x86_64.rpm
 
 # Installing fonts
-dnf install fontawesome-fonts fontawesome-fonts-web
+dnf install -y fontawesome-fonts fontawesome-fonts-web
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
 unzip FiraCode.zip -d /usr/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
